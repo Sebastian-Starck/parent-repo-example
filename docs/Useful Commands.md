@@ -15,6 +15,14 @@ git submodule status
 git show <tag>:frontend
 ```
 
+### Checkout submodule branch
+```bash
+# Update submodule
+git submodule update --remote frontend
+# Checkout a specific branch in the frontend submodule
+git submodule set-branch -b <branch-name> frontend
+```
+
 ### Emergency Rollback
 
 ```bash
