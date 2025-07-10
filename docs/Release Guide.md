@@ -18,6 +18,24 @@ building of the assets and the creation of a new tag.
 Updating the submodule will update the commit reference. Having the reference preserved in the tag
 will allow branching out of this commit in case of requiring a frontend hotfix.
 
+#### Quick steps
+
+```bash
+git submodule update --remote frontend
+# Build assets
+./build.sh
+# Add compiled assets
+git add public
+# Add new frontend reference
+git add frontend
+# Commit changes
+git commit -m "Updated frontend files"
+# Create new tag
+git tag v2.0.0
+# Push changes
+git push origin main --tags
+```
+
 ### Update frontend reference
 
 Fetch latest changes for the  frontend module
